@@ -186,7 +186,7 @@ void separateChannels(const uchar4* const inputImageRGBA,
   if (c >= numCols || r >= numRows)
         return;
   
-  m = r * numCols + c;
+  int m = r * numCols + c;
   redChannel[m] = inputImageRGBA[m].x;
   greenChannel[m] = inputImageRGBA[m].y;
   blueChannel[m] = inputImageRGBA[m].z;
